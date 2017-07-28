@@ -1,3 +1,29 @@
+# Set Up
+
+## There are a few items to start with before working on an angular project
+
+1. NodeJS is required
+1. Angular cli is required globally (`npm install -g @angular/cli`)
+    * Administrator / sudo privileges are required
+    * If an error occured such as an install loop try installing `node-gyp` (`npm install -g node-gyp`)
+1. Find a location where you want the project folder to be located
+1. Use the command line to create an angular project (`ng new my-app`)
+1. Update the polyfills.
+    * It's a good idea to support as many browsers as possible
+    * In `src/polyfills.ts` uncomment all imports and use the necessary npm installs that are required for the polyfills
+        * npm installs listed here:
+        * `npm install --save classlist.js`
+        * `npm install --save web-animations-js`
+        * `npm install --save intl`
+1. Update `.angular-cli.json` in the root of the project. We want to update the project use use sass
+    * Line 22 update `"styles.css"` to be `"styles.scss"`
+    * Line 57 update `"styleExt": "css",` to be `"styleExt": "scss",`
+    * At the same time update the file name of `src/app/app.component.css` to be `src/app/app.component.scss`
+    * Also change the reference of `./app.component.css` to `./app.component.scss` in `src/app/app.component.ts` on line 6
+
+Congratulations! The base project is all set up.
+
+
 # AngGit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.2.
