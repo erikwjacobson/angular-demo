@@ -19,7 +19,7 @@
     * Line 22 update `"styles.css"` to be `"styles.scss"`
     * Line 57 update `"styleExt": "css",` to be `"styleExt": "scss",`
     * At the same time update the file name of `src/app/app.component.css` to be `src/app/app.component.scss`
-    * Also change the reference of `./app.component.css` to `./app.component.scss` in `src/app/app.component.ts` on line 6
+    * Also change the reference of `./app.component.css` to `./app.component.scss` in `src/app/todo.component.ts` on line 6
 
 Congratulations! The base project is all set up.
 

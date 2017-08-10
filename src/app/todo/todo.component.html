@@ -1,0 +1,14 @@
+<h1>Erik's To Do List</h1>
+<ul>
+    <!-- Use *ngFor to look through an array -->
+    <li *ngFor="let todo of todos">{{ todo }}</li>
+</ul>
+
+<!-- use a form to add to the todo list -->
+<!-- to use an event use () submit, click are popular but any event can be used -->
+<form (submit)="addTodo(newTodo)">
+    <!-- ngModel is 2 way binding and required [()] -->
+    <!-- be sure to import FormsModule -->
+    <input type="text" name="newTodo" [(ngModel)]="newTodo">
+    <button type="submit">Add</button>
+</form>
