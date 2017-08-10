@@ -1,9 +1,17 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'app-component',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    // templateUrl: './app.component.html',
+    //styleUrls: ['./app.component.scss']
+    // template can used to inline the HTML in the component
+    template: `<div>{{ title }}</div>`,
+    // styles can be used to inline the styles in the component
+    styles: [
+        'div { display: none; }'
+    ],
+    // Emulated encapsulation is the default. Adding encapsulation is optional
+    encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent implements OnInit, OnDestroy {
 
