@@ -3,5 +3,10 @@
     <!-- update the title to use the app interface -->
     <h1>Welcome to {{ app.title }}!</h1>
 </div>
+<p>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/', 'todo']">To Do List</a>
+    <a (click)="goToDo()">To Do List On Click</a>
+</p>
 
-<todo-component></todo-component>
+<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-component',
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private app: App;
 
     // First the component constructor is run. The constructor should be used to initialize component variables. No logic
-    constructor() { }
+    constructor(private router: Router) { }
 
     // Second the component init function is run. The init function is where the starting logic of the component should occur
     ngOnInit() {
@@ -29,6 +30,11 @@ export class AppComponent implements OnInit, OnDestroy {
         this.app = {
             title: 'Erik\'s To Do Application'
         };
+    }
+
+    // Onclick function to go to the todo route
+    private goToDo() {
+        this.router.navigate(['/', 'todo']);
     }
 
     // The last thing a component does is get destroyed. This happens when a component is no longer valid either by removal or page transition
