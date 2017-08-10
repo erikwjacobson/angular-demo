@@ -16,7 +16,7 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 export class AppComponent implements OnInit, OnDestroy {
 
     // TypeScript helps check code before runtime. Here title is always a string so we initialize title to be a string
-    title: string;
+    app: App;
 
     // add a todo array
     todos: string[];
@@ -28,7 +28,10 @@ export class AppComponent implements OnInit, OnDestroy {
     ngOnInit() {
         // here we give title a value
         // `this` is the component
-        this.title = 'ToDo App';
+        // change to app.title to use the correct interface
+        this.app = {
+            title: 'ToDo App'
+        };
 
         // add some todos to the array
         this.todos = ['Do Homework', 'Work on SAFEHR'];
@@ -37,4 +40,9 @@ export class AppComponent implements OnInit, OnDestroy {
     // The last thing a component does is get destroyed. This happens when a component is no longer valid either by removal or page transition
     // This is a good place to destroy component variables to help with memory
     ngOnDestroy() { }
+}
+
+// typescript interface to set up specific classes
+interface App {
+    title: string;
 }
