@@ -21,6 +21,9 @@ export class AppComponent implements OnInit, OnDestroy {
     // add a todo array
     todos: string[];
 
+    // create the newTodo item used in the template
+    newTodo: string;
+
     // First the component constructor is run. The constructor should be used to initialize component variables. No logic
     constructor() { }
 
@@ -35,6 +38,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
         // add some todos to the array
         this.todos = ['Do Homework', 'Work on SAFEHR'];
+    }
+
+    // function to add a new todo to the todos list
+    addTodo(newTodo: string) {
+        // newTodo is the parameter from the submit form
+        // push is a native javascript function to add to an array
+        this.todos.push(newTodo);
+        // Angular will automatically update the template
+        // clear the input box after submitting
+        this.newTodo = '';
     }
 
     // The last thing a component does is get destroyed. This happens when a component is no longer valid either by removal or page transition
