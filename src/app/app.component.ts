@@ -18,6 +18,9 @@ export class AppComponent implements OnInit, OnDestroy {
     // TypeScript helps check code before runtime. Here title is always a string so we initialize title to be a string
     title: string;
 
+    // add a todo array
+    todos: string[];
+
     // First the component constructor is run. The constructor should be used to initialize component variables. No logic
     constructor() { }
 
@@ -26,6 +29,9 @@ export class AppComponent implements OnInit, OnDestroy {
         // here we give title a value
         // `this` is the component
         this.title = 'ToDo App';
+
+        // add some todos to the array
+        this.todos = ['Do Homework', 'Work on SAFEHR'];
     }
 
     // The last thing a component does is get destroyed. This happens when a component is no longer valid either by removal or page transition
