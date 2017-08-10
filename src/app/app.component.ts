@@ -5,18 +5,18 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
     // template can used to inline the HTML in the component
-    //template: `<div>{{ title }}</div>`,
+    // template: `<div>{{ title }}</div>`,
     // styles can be used to inline the styles in the component
-    //styles: [
+    // styles: [
     //    'div { display: none; }'
-    //],
+    // ],
     // Emulated encapsulation is the default. Adding encapsulation is optional
-    //encapsulation: ViewEncapsulation.Emulated
+    // encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent implements OnInit, OnDestroy {
 
     // TypeScript helps check code before runtime. Here title is always a string so we initialize title to be a string
-    app: App;
+    private app: App;
 
     // First the component constructor is run. The constructor should be used to initialize component variables. No logic
     constructor() { }
