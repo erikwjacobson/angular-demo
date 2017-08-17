@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({
-    selector: 'todo-component',
-    templateUrl: './todo.component.html',
-    styleUrls: ['./todo.component.scss']
+    selector: 'todo-item-component',
+    templateUrl: './item.component.html',
+    styleUrls: ['./item.component.scss']
     // template can used to inline the HTML in the component
     // template: `<div>{{ title }}</div>`,
     // styles can be used to inline the styles in the component
@@ -13,7 +13,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
     // Emulated encapsulation is the default. Adding encapsulation is optional
     // encapsulation: ViewEncapsulation.Emulated
 })
-export class ToDoComponent implements OnInit, OnDestroy {
+export class ToDoItemComponent implements OnInit, OnDestroy {
+
+    @Input() todoTitle: string;
     // Put anything that the template needs at the top.
     // add a todo array
     private todos: string[];
@@ -27,7 +29,7 @@ export class ToDoComponent implements OnInit, OnDestroy {
     // Second the component init function is run. The init function is where the starting logic of the component should occur
     ngOnInit() {
         // add some todos to the array
-        this.todos = ['Homework', 'B507'];
+        this.todos = [];
     }
 
     // function to add a new todo to the todos list

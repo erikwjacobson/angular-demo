@@ -1,7 +1,8 @@
+<h1>{{ todoTitle }}</h1>
 <ul>
     <!-- Use *ngFor to look through an array -->
     <li *ngFor="let todo of todos; let i = index">
-        <todo-item-component [todoTitle]="todo"></todo-item-component><button (click)="deleteTodo(i)">X</button>
+        {{ todo }}<button (click)="deleteTodo(i)">X</button>
     </li>
 </ul>
 
